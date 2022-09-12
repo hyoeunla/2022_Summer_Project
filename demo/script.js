@@ -14,7 +14,7 @@ recipeCloseBtn.addEventListener("click", () => {
 function getMealList() {
   let searchInputTxt = document.getElementById("search-input").value.trim();
   fetch(
-    `https://www.themealdb.com/api/json/v1/1/filter.php?i=${searchInputTxt}`
+    `http://211.237.50.150:7080/openapi/2cb86c77daee48108f6110a6fbaf0153520d3d2a4db32dc6160a71d81de7e491/json/Grid_20150827000000000227${searchInputTxt}`
   )
     .then((response) => response.json())
     .then((data) => {
