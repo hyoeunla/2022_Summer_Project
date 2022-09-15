@@ -14,10 +14,11 @@ recipeCloseBtn.addEventListener("click", () => {
 function getMealList() {
   let searchInputTxt = document.getElementById("search-input").value.trim();
   fetch(
-    `http://openapi.foodsafetykorea.go.kr/api/add638aaa6f6417cb9a4/COOKRCP01/json/1/5/RCP_NM=${searchInputTxt}`
+    `https://www.themealdb.com/api/json/v1/1/filter.php?i=${searchInputTxt}`
   )
     .then((response) => response.json())
     .then((data) => {
+      let html = "";
       if (data.meals) {
         data.meals.forEach((meal) => {
           html += `
@@ -48,7 +49,7 @@ function getMealRecipe(e) {
   if (e.target.classList.contains("recipe-btn")) {
     let mealItem = e.target.parentElement.parentElement;
     fetch(
-      `http://openapi.foodsafetykorea.go.kr/api/add638aaa6f6417cb9a4/COOKRCP01/json/1/5/RCP_PARTS_DTLS=${mealItem.dataset.id}`
+      `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealItem.dataset.id}`
     )
       .then((response) => response.json())
       .then((data) => mealRecipeModal(data.meals));
