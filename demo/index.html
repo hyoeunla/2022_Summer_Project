@@ -11,22 +11,23 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/3cf4db8e74.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div class="container">
       <div class="meal-wrapper">
         <div class="meal-search">
-          <h2 class="title">Find Meals For Your Ingredients</h2>
-          <blockquote>
-            I'm not good at Cooking But You can do it.<br />
-            <cite>- Hyoeun La</cite>
-          </blockquote>
-
+          <div class="logo">
+            <img src="./img/logo.jpg" alt="" />
+          </div>
           <div class="meal-search-box">
             <input
               type="text"
               class="search-control"
-              placeholder="Enter an ingredient"
+              placeholder="영어로 재료 및 요리를 검색하세요!"
               id="search-input"
             />
             <button type="submit" class="search-btn btn" id="search-btn">
@@ -36,7 +37,6 @@
         </div>
 
         <div class="meal-result">
-          <h2 class="title">Your Search Results:</h2>
           <div id="meal">
             <!-- meal item -->
             <!-- <div class = "meal-item">

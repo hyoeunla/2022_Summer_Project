@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap");
 
 * {
   padding: 0;
@@ -6,14 +6,15 @@
   box-sizing: border-box;
 }
 :root {
-  --tenne-tawny: #8d42c6;
-  --tenne-tawny-dark: #b381d9;
+  --tenne-tawny: #ffc000;
+  --tenne-tawny-dark: #ff9100;
+  --font-color: #000;
 }
 body {
   font-weight: 300;
   font-size: 1.05rem;
   line-height: 1.6;
-  font-family: "Poppins", sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
 }
 
 /*  */
@@ -31,6 +32,18 @@ body {
   margin-bottom: 1rem;
 }
 
+.logo {
+  /* position: absolute;
+  width: 261px;
+  height: 139px;
+  left: 590px;
+  top: 18px; */
+  width: 100%;
+}
+.logo img {
+  width: 261px;
+  height: 139px;
+}
 /*  */
 .container {
   min-height: 100vh;
@@ -60,10 +73,10 @@ body {
 .search-control {
   padding: 0 1rem;
   font-size: 1.1rem;
-  font-family: inherit;
+  font-family: "Noto Sans KR", sans-serif;
   outline: 0;
   border: 1px solid var(--tenne-tawny);
-  color: var(--tenne-tawny);
+  color: #ff9100;
   border-top-left-radius: 2rem;
   border-bottom-left-radius: 2rem;
 }
@@ -80,10 +93,18 @@ body {
   border-top-right-radius: 2rem;
   border-bottom-right-radius: 2rem;
   transition: all 0.4s linear;
-  -webkit-transition: all 0.4s linear;
-  -moz-transition: all 0.4s linear;
-  -ms-transition: all 0.4s linear;
-  -o-transition: all 0.4s linear;
+  -webkit-transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  -ms-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear;
+}
+
+.fa-magnifying-glass {
+  /* display: flex;
+  align-items: center; */
+  font-size: 22px;
+  margin-right: 6px;
+  margin-bottom: 14px;
 }
 .search-btn:hover {
   background: var(--tenne-tawny-dark);
