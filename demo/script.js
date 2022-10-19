@@ -35,7 +35,7 @@ function getMealList() {
         });
         mealList.classList.remove("notFound");
       } else {
-        html = "Sorry, we didn't find any meal!";
+        html = "원하시는 레시피를 찾지 못했습니다<br>다시 검색해주세요!";
         mealList.classList.add("notFound");
       }
 
